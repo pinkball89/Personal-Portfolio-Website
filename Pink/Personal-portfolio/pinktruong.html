@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Portfolio Website</title>
+    <link rel="stylesheet" href="pinkStyle.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>MSCS Student of GaTech</p>
+            <h1>Hi, I'm <span>Pink Truong </span><br> From New Jersey</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------About Me---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Avatar_Photos.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="about-content">About Me</h1>
+                <p>I am an experienced, highly motivated person with great attention to detail, problem-solving skills, and the ability to learn fast. I graduated with First-class honors from the Banking Academy of Vietnam. I also have a master's degree with merit in International Business from the University of Birmingham. Now I am pursuing my master's degree in Computer Science at Georgia Institute of Technology.
+
+                    I have worked in multiple companies in various countries and consistently performed at the top level regardless of the company size and industry, from a small startup in Singapore (Event Eleven) to a large commercial bank in Vietnam (BIDV) and a multi-national technology company (Cognizant/Facebook).</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UML design</span><br>Software Architechture and Design</li>
+                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        <li><span>ML/AI</span><br>Building Machine Learning Trading Model</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Aug 2021 - Dec 2021</span><br>Event Coordinator - Stevens Women in Computer Science at Stevens Institute of Technology.</li>
+                        <li><span>Nov 2017 - Jun 2018</span><br>Client Support Analyst @Facebook at Cognizant.</li>
+                        <li><span>May 2016 - Mar 2017</span><br>Part time Promoter at Event Elevent.</li>
+                        <li><span>Nov 2011 - Jun 2015</span><br>Customer Relationship Management Specialist at BIDV.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-2024</span><br>MSCS - Georgia institute of Technology</li>
+                        <li><span>2016 -2017</span><br>MS in International Business - University of Birmingham.</li>
+                        <li><span>2007-2011</span><br>Bachelor in Banking and Finance - Banking Academy of Vietnam.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Notable Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/jobOfferComaprision.png">
+                <div class="layer">
+                    <h3>Job Offer Comparision App</h3>
+                    <p>The Android application that helps to manage and compare job offers.  The app will use user-provided data like position, salary, bonus, benefits… as well as 
+                        external data source like cost-of-living index, market average… to help comparing job offers. User can 
+                        customize various aspect of the comparison.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/UML.png">
+                <div class="layer">
+                    <h3>Design UML and boost system performance for managing grocery store</h3>
+                    <p>Working with a team to develop from ground up a high performant, robust and secure 
+                        system to manage multiple grocery stores, exposing via REST API the common operations like create 
+                        store, manage inventories, order, invoice, etc. The service layer was implemented with Java Spring Boot 
+                        stack, mainly Spring Web, Spring Security and Spring JPA and deployed as a Docker container.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ML.png">
+                <div class="layer">
+                    <h3>Building a machine larning trading model</h3>
+                    <p> Building a machine learning trading model using Random Forest method 
+                        that consistently beats a manual strategy based on common indicators (MACD, RSI…). Implemented in 
+                        Python with NumPy, Pandas and various other libraries.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> pinktruongusa@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> 347 387 1408</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/PinkTruongResume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+           
+        </div>
+    </div>
+    
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
